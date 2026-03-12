@@ -3,34 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curzon Network | Ensuring Digital Access for All</title>
+    <title>Curzon Network | Digital Equity for Newcastle</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <header>
-    <div class="container">
-        <h1>Curzon<span>Network</span></h1>
+    <div class="container nav-flex">
+        <div class="logo">Curzon<span>Network</span></div>
         <nav>
             <a href="index.html" class="active">Home</a>
             <a href="about.html">About</a>
             <a href="data.html">Community Data</a>
             <a href="solution.html">Solutions</a>
+            <button class="btn-sm" onclick="showMessage()">Contact</button>
         </nav>
     </div>
 </header>
 
-<section class="hero">
-    <div class="container">
-        <h2>Unlocking Community Digital Power</h2>
-        <p>Reliable internet access and robust network security are essential resources in the modern digital age. We explore how connectivity impacts Newcastle homes and organizations.</p>
-        <button class="btn" onclick="showMessage()">Request Assessment</button>
-    </div>
-</section>
+<main>
+    <section class="hero-modern">
+        <div class="container grid-2">
+            <div class="hero-content">
+                <span class="badge">Bridging the Divide</span>
+                <h1>Unlocking Community <span>Digital Power</span></h1>
+                <p>We provide the infrastructure and security Newcastle needs to thrive. From high-speed residential connectivity to enterprise-grade network protection.</p>
+                <div class="cta-group">
+                    <button class="btn-primary" onclick="showMessage()">Request Assessment</button>
+                    <a href="solution.html" class="btn-secondary">View Solutions →</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="glass-card">
+                    <div class="status-dot"></div>
+                    <p>Network Status: <strong>Optimized</strong></p>
+                    <div class="mini-graph"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container grid-3">
+            <div class="stat-item">
+                <h3>99.9%</h3>
+                <p>Uptime Guarantee</p>
+            </div>
+            <div class="stat-item">
+                <h3>15k+</h3>
+                <p>Homes Connected</p>
+            </div>
+            <div class="stat-item">
+                <h3>24/7</h3>
+                <p>Security Monitoring</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Our Core Pillars</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <div class="icon">🌐</div>
+                    <h4>Universal Access</h4>
+                    <p>Ensuring every corner of Newcastle has high-speed, reliable fiber-grade internet.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">🛡️</div>
+                    <h4>Cyber Resilience</h4>
+                    <p>Advanced encryption and threat detection to keep community data safe.</p>
+                </div>
+                <div class="card">
+                    <div class="icon">📊</div>
+                    <h4>Data Insights</h4>
+                    <p>Using real-time analytics to identify and fix connectivity gaps in real-time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer>
     <div class="container">
-        <p>&copy; 2026 Curzon Network | Enhancing Digital Equity in Newcastle</p>
+        <div class="footer-content">
+            <p>&copy; 2026 Curzon Network | Enhancing Digital Equity in Newcastle</p>
+            <div class="social-links">
+                <a href="#">LinkedIn</a>
+                <a href="#">Twitter</a>
+            </div>
+        </div>
     </div>
 </footer>
 
