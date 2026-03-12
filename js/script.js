@@ -1,3 +1,3 @@
 function showMessage(){
-    alert("Curzon Network helps improve internet reliability and security.");
+    alert("Welcome! Curzon Network provides expert, accessible network consulting across the Newcastle community. Learn how we can support you.");
 }

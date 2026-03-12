@@ -1,21 +1,209 @@
-body{
-    font-family: Arial;
-    margin:0;
-    background:#f4f4f4;
+/* --- Global Styles --- */
+:root {
+  --primary-color: #f7faff; /* Soft background */
+  --secondary-color: #007bff; /* Electric Blue accent */
+  --dark-color: #111;
+  --text-dark: #333;
+  --text-light: #fff;
+  --card-bg: #fff;
+  --header-height: 70px;
 }
 
-header{
-    background:#111;
-    color:white;
-    padding:15px;
+body {
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+  color: var(--text-dark);
+  line-height: 1.6;
 }
 
-nav a{
-    color:white;
-    margin-right:15px;
-    text-decoration:none;
+/* --- Layout Utility --- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-section{
-    padding:40px;
+/* --- Header & Navigation --- */
+header {
+  background: var(--dark-color);
+  color: var(--text-light);
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  position: fixed; /* Keep it visible when scrolling */
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+header h1 span {
+  color: var(--secondary-color);
+}
+
+nav {
+  display: flex;
+  gap: 10px;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3sease, color 0.3sease;
+}
+
+/* Navigation Hover & Active State */
+nav a:hover, nav a.active {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+/* --- Hero Section (Homepage) --- */
+.hero {
+  /* Using a modern gradient background */
+  background: linear-gradient(135deg, var(--dark-color) 0%, #333 100%);
+  color: var(--text-light);
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  margin-top: var(--header-height); /* Account for fixed header */
+  padding: 60px 0;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* --- Buttons --- */
+.btn {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+  padding: 12px 28px;
+  border: none;
+  border-radius: 50px; /* Fully rounded 'pill' button */
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 15px rgba(0,123,255,0.3);
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight 'lift' effect */
+}
+
+/* --- Content Sections --- */
+section.main-content {
+  padding: 80px 0;
+  margin-top: var(--header-height); /* Applied only to internal pages */
+}
+
+section.main-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  border-left: 5px solid var(--secondary-color);
+  padding-left: 15px;
+}
+
+section.main-content p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  max-width: 800px;
+}
+
+/* --- Data Grid (Community Data Page) --- */
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+}
+
+.card h3 {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.card p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* --- Solutions Layout (Flexbox) --- */
+.solutions-content {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.solutions-text {
+  flex: 1;
+}
+
+.solutions-image {
+  flex: 1;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+  overflow: hidden;
+  height: 300px;
+  background: #ccc; /* Placeholder color, insert actual image */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+/* --- Footer --- */
+footer {
+  background: #eee;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
 }
